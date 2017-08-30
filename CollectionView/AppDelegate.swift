@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CollectionView
 //
-//  Created by Umesh Chauhan on 29/08/17.
+//  Created by Nitin Bhatia on 29/08/17.
 //  Copyright © 2017 Nitin Bhatia. All rights reserved.
 //
 
