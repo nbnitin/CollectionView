@@ -12,11 +12,11 @@ private let reuseIdentifier = "cell"
 
 class ExtraCollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
     
-    var data : [Data] = []
+    var data : [Data1] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        data = Data.setupData()
+        data = Data1.setupData()
 
     }
 
@@ -51,7 +51,7 @@ class ExtraCollectionViewController: UICollectionViewController,UICollectionView
         cell.btnDisLike.addTarget(self, action: #selector(disLike(_:)), for: .touchUpInside)
         cell.btnLike.addTarget(self, action: #selector(like(_:)), for: .touchUpInside)
        
-        cell.data = Data(img: data[indexPath.row].img, like: data[indexPath.row].like, dislike: data[indexPath.row].dislike)
+        cell.data = Data1(img: data[indexPath.row].img, like: data[indexPath.row].like, dislike: data[indexPath.row].dislike)
         
         
         // Configure the cell

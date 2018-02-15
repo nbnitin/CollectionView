@@ -18,5 +18,5 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var btnCheck: UIButton!
     @IBOutlet weak var lblTitle: UILabel!
     
-    var data : Data! = nil
+    var data : Data1! = nil
 }

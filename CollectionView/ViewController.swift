@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var data : Data? = nil
+    var data : Data1? = nil
 
     @IBOutlet weak var lblDislike: UILabel!
     @IBOutlet weak var lblLike: UILabel!

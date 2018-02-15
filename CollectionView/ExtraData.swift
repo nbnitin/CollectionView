@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Data{
+class Data1{
     var img : String
     var like : Int
     var dislike : Int
@@ -19,11 +19,11 @@ class Data{
         self.dislike = dislike
     }
     
-    class func setupData()->[Data]{
+    class func setupData()->[Data1]{
     
-        var data : [Data] = []
+        var data : [Data1] = []
         for i in 0...5{
-            let d = Data(img: "image-\(i+1)", like: 0, dislike: 0)
+            let d = Data1(img: "image-\(i+1)", like: 0, dislike: 0)
             data.append(d)
         }
         return data
