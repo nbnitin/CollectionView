@@ -18,6 +18,10 @@
 		4B7960F81F5567C200A31630 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7960F71F5567C200A31630 /* CollectionView.swift */; };
 		4B7960FA1F5569D900A31630 /* TwoOrThreeCollumnPerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7960F91F5569D900A31630 /* TwoOrThreeCollumnPerRow.swift */; };
 		4B7960FC1F556B5100A31630 /* AddNewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7960FB1F556B5100A31630 /* AddNewCollectionViewController.swift */; };
+		946F4E55203C4375008EBA21 /* DynamicHeightWithContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F4E54203C4375008EBA21 /* DynamicHeightWithContentViewController.swift */; };
+		946F4E57203C4457008EBA21 /* DynamicHeightAccordingToContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F4E56203C4457008EBA21 /* DynamicHeightAccordingToContent.swift */; };
+		946F4E59203C50EF008EBA21 /* DynamicWidthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F4E58203C50EF008EBA21 /* DynamicWidthCell.swift */; };
+		946F4E5B203C510D008EBA21 /* DynamicWidthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F4E5A203C510D008EBA21 /* DynamicWidthVC.swift */; };
 		94E292E82035795A00D1BD4E /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E292E42035795900D1BD4E /* LibraryModel.swift */; };
 		94E292E92035795A00D1BD4E /* LibraryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E292E52035795900D1BD4E /* LibraryDetailViewController.swift */; };
 		94E292EA2035795A00D1BD4E /* LibraryDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E292E62035795900D1BD4E /* LibraryDetailCollectionViewCell.swift */; };
@@ -41,6 +45,10 @@
 		4B7960F71F5567C200A31630 /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		4B7960F91F5569D900A31630 /* TwoOrThreeCollumnPerRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoOrThreeCollumnPerRow.swift; sourceTree = "<group>"; };
 		4B7960FB1F556B5100A31630 /* AddNewCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewCollectionViewController.swift; sourceTree = "<group>"; };
+		946F4E54203C4375008EBA21 /* DynamicHeightWithContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightWithContentViewController.swift; sourceTree = "<group>"; };
+		946F4E56203C4457008EBA21 /* DynamicHeightAccordingToContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightAccordingToContent.swift; sourceTree = "<group>"; };
+		946F4E58203C50EF008EBA21 /* DynamicWidthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicWidthCell.swift; sourceTree = "<group>"; };
+		946F4E5A203C510D008EBA21 /* DynamicWidthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicWidthVC.swift; sourceTree = "<group>"; };
 		94E292E42035795900D1BD4E /* LibraryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
 		94E292E52035795900D1BD4E /* LibraryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryDetailViewController.swift; sourceTree = "<group>"; };
 		94E292E62035795900D1BD4E /* LibraryDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryDetailCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +97,10 @@
 				94E292E72035795900D1BD4E /* PinterestLayout.swift */,
 				4B7960DF1F55670000A31630 /* AppDelegate.swift */,
 				4B7960E31F55670000A31630 /* Main.storyboard */,
+				946F4E58203C50EF008EBA21 /* DynamicWidthCell.swift */,
+				946F4E5A203C510D008EBA21 /* DynamicWidthVC.swift */,
+				946F4E54203C4375008EBA21 /* DynamicHeightWithContentViewController.swift */,
+				946F4E56203C4457008EBA21 /* DynamicHeightAccordingToContent.swift */,
 				4B40FB751F56A4890027C75E /* ExtraData.swift */,
 				4B40FB731F56A3F50027C75E /* ExtraCollectionViewController.swift */,
 				4B40FB771F56BDF70027C75E /* ViewController.swift */,
@@ -178,14 +190,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				94E292EB2035795A00D1BD4E /* PinterestLayout.swift in Sources */,
+				946F4E55203C4375008EBA21 /* DynamicHeightWithContentViewController.swift in Sources */,
 				94E292EA2035795A00D1BD4E /* LibraryDetailCollectionViewCell.swift in Sources */,
 				94E292ED2035799700D1BD4E /* Articles.swift in Sources */,
 				4B7960FA1F5569D900A31630 /* TwoOrThreeCollumnPerRow.swift in Sources */,
 				4B7960F81F5567C200A31630 /* CollectionView.swift in Sources */,
+				946F4E57203C4457008EBA21 /* DynamicHeightAccordingToContent.swift in Sources */,
+				946F4E5B203C510D008EBA21 /* DynamicWidthVC.swift in Sources */,
 				4B7960E01F55670000A31630 /* AppDelegate.swift in Sources */,
 				4B7960F21F55674900A31630 /* CollectionViewCell.swift in Sources */,
 				4B40FB761F56A4890027C75E /* ExtraData.swift in Sources */,
 				4B7960FC1F556B5100A31630 /* AddNewCollectionViewController.swift in Sources */,
+				946F4E59203C50EF008EBA21 /* DynamicWidthCell.swift in Sources */,
 				4B40FB781F56BDF70027C75E /* ViewController.swift in Sources */,
 				94E292E92035795A00D1BD4E /* LibraryDetailViewController.swift in Sources */,
 				94E292E82035795A00D1BD4E /* LibraryModel.swift in Sources */,
