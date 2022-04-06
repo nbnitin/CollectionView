@@ -45,7 +45,7 @@ class DynamicHeightWithContentViewController: UIViewController,UICollectionViewD
         
     
         
-       let attribute = [NSFontAttributeName:UIFont.systemFont(ofSize:16)] //Font here must be equal to control font size in your storyboard
+        let attribute = [NSAttributedString.Key.font:UIFont.systemFont(ofSize:16)] //Font here must be equal to control font size in your storyboard
         
         let estimatedFrame = testString.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attribute, context: nil)
         print(estimatedFrame.height)
@@ -54,7 +54,7 @@ class DynamicHeightWithContentViewController: UIViewController,UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(8, 8, 8, 8)
+        return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
 
 }

@@ -42,7 +42,7 @@ class DynamicWidthVC: UIViewController,UICollectionViewDelegate,UICollectionView
         
         let size = CGSize(width:.greatestFiniteMagnitude,height:40.0)
         
-        let attribute = [NSFontAttributeName:UIFont.systemFont(ofSize:17)]
+        let attribute = [NSAttributedString.Key.font:UIFont.systemFont(ofSize:17)]
         let estimatedFrame = testString.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attribute, context: nil)
         // +20 is trailing space + leading space i.e.., 8 + 8 + extra 4 for space around it = 20
         return CGSize(width: estimatedFrame.width + 20 , height: 40)
@@ -50,7 +50,7 @@ class DynamicWidthVC: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(8, 8, 8, 8)
+        return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
     
 }

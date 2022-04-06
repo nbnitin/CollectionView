@@ -66,33 +66,33 @@ class ExtraCollectionViewController: UICollectionViewController,UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(8, 0, 12, 0)
+        return UIEdgeInsets(top: 8, left: 0, bottom: 12, right: 0)
     }
 
 
-    func like(_ sender:UIButton){
+    @objc func like(_ sender:UIButton){
         let indexPath = NSIndexPath(row:sender.tag,section:0) as IndexPath
         let cell = collectionView?.cellForItem(at: indexPath) as! CollectionViewCell
         data[indexPath.row].like += 1
         cell.lblLike.text =  "\(data[indexPath.row].like)"
         let transition = CATransition()
-        transition.type = kCATransitionFade
+        transition.type = CATransitionType.fade
         transition.duration = 0.2
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         cell.lblLike.layer.add(transition, forKey: "changeTextTransition")
         cell.data.like = data[indexPath.row].like
 
     }
     
-    func disLike(_ sender:UIButton){
+    @objc func disLike(_ sender:UIButton){
         let indexPath = NSIndexPath(row:sender.tag,section:0) as IndexPath
         let cell = collectionView?.cellForItem(at: indexPath) as! CollectionViewCell
         data[indexPath.row].dislike += 1
         cell.lblDislike.text =  "\(data[indexPath.row].dislike)"
         let transition = CATransition()
-        transition.type = kCATransitionFade
+        transition.type = CATransitionType.fade
         transition.duration = 0.2
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         cell.lblDislike.layer.add(transition, forKey: "changeTextTransition")
         cell.data.dislike = data[indexPath.row].dislike
 

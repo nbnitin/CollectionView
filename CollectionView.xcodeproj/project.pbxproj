@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453C61BD27FD6A440081D5B8 /* DynamicHeightOtherWayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C61BC27FD6A440081D5B8 /* DynamicHeightOtherWayViewController.swift */; };
+		453C61BF27FD6A580081D5B8 /* DynamicHeightOtherWayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453C61BE27FD6A580081D5B8 /* DynamicHeightOtherWayCollectionViewCell.swift */; };
 		4B40FB741F56A3F50027C75E /* ExtraCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40FB731F56A3F50027C75E /* ExtraCollectionViewController.swift */; };
 		4B40FB761F56A4890027C75E /* ExtraData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40FB751F56A4890027C75E /* ExtraData.swift */; };
 		4B40FB781F56BDF70027C75E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B40FB771F56BDF70027C75E /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		453C61BC27FD6A440081D5B8 /* DynamicHeightOtherWayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightOtherWayViewController.swift; sourceTree = "<group>"; };
+		453C61BE27FD6A580081D5B8 /* DynamicHeightOtherWayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightOtherWayCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B40FB731F56A3F50027C75E /* ExtraCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraCollectionViewController.swift; sourceTree = "<group>"; };
 		4B40FB751F56A4890027C75E /* ExtraData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraData.swift; sourceTree = "<group>"; };
 		4B40FB771F56BDF70027C75E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				4B7960E61F55670000A31630 /* Assets.xcassets */,
 				4B7960E81F55670000A31630 /* LaunchScreen.storyboard */,
 				4B7960EB1F55670000A31630 /* Info.plist */,
+				453C61BC27FD6A440081D5B8 /* DynamicHeightOtherWayViewController.swift */,
+				453C61BE27FD6A580081D5B8 /* DynamicHeightOtherWayCollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -147,8 +153,7 @@
 				TargetAttributes = {
 					4B7960DB1F55670000A31630 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = SF78HV8BZS;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -157,6 +162,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -197,10 +203,12 @@
 				4B7960F81F5567C200A31630 /* CollectionView.swift in Sources */,
 				946F4E57203C4457008EBA21 /* DynamicHeightAccordingToContent.swift in Sources */,
 				946F4E5B203C510D008EBA21 /* DynamicWidthVC.swift in Sources */,
+				453C61BF27FD6A580081D5B8 /* DynamicHeightOtherWayCollectionViewCell.swift in Sources */,
 				4B7960E01F55670000A31630 /* AppDelegate.swift in Sources */,
 				4B7960F21F55674900A31630 /* CollectionViewCell.swift in Sources */,
 				4B40FB761F56A4890027C75E /* ExtraData.swift in Sources */,
 				4B7960FC1F556B5100A31630 /* AddNewCollectionViewController.swift in Sources */,
+				453C61BD27FD6A440081D5B8 /* DynamicHeightOtherWayViewController.swift in Sources */,
 				946F4E59203C50EF008EBA21 /* DynamicWidthCell.swift in Sources */,
 				4B40FB781F56BDF70027C75E /* ViewController.swift in Sources */,
 				94E292E92035795A00D1BD4E /* LibraryDetailViewController.swift in Sources */,
@@ -279,6 +287,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -322,6 +331,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -331,12 +341,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SF78HV8BZS;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.CollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -344,12 +356,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SF78HV8BZS;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.CollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

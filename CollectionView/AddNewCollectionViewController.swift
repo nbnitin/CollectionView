@@ -43,7 +43,7 @@ class AddNewCollectionViewController: UICollectionViewController,UICollectionVie
         navigationController?.toolbar.isHidden = false
     }
     
-    func enableEdit(_ sender : Any){
+    @objc func enableEdit(_ sender : Any){
         
         collectionView?.reloadData()
         
@@ -115,7 +115,7 @@ class AddNewCollectionViewController: UICollectionViewController,UICollectionVie
     }
     
     
-    func updateCheck(_ sender: UIButton){
+    @objc func updateCheck(_ sender: UIButton){
         
         let tag = sender.tag
         let indexPath = NSIndexPath(row: tag, section: 0) as IndexPath
