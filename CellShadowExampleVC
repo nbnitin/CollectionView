@@ -1,0 +1,85 @@
+import UIKit
+
+class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
+    
+    @IBOutlet weak var collView2: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BaseStylizedCollectionViewCell
+        cell.contentView.backgroundColor = .white
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 163, height: 96)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 12, left: 20, bottom: 0, right: 20)
+        
+    }
+    
+}
+
+
+class BaseStylizedCollectionViewCell: UICollectionViewCell {
+    var cornerRadius: CGFloat = 4.0
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // Apply rounded corners to contentView
+        contentView.layer.cornerRadius = cornerRadius
+        contentView.layer.masksToBounds = true
+        
+        // Set masks to bounds to false to avoid the shadow
+        // from being clipped to the corner radius
+        layer.cornerRadius = cornerRadius
+        layer.masksToBounds = false
+        
+        // Apply a shadow
+        layer.shadowRadius = 6
+        layer.shadowOpacity = 1
+        layer.shadowColor = UIColor(red: 0.91, green: 0.931, blue: 0.954, alpha: 1).cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        
+        layer.borderColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1).cgColor
+        layer.borderWidth = 0.5
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // Improve scrolling performance with an explicit shadowPath
+        layer.shadowPath = UIBezierPath(
+            roundedRect: bounds,
+            cornerRadius: cornerRadius
+        ).cgPath
+    }
+}
