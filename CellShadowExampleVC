@@ -1,3 +1,5 @@
+//Note take two collection views one with horizontal scrolling and other with vertical scrolling
+
 import UIKit
 
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
